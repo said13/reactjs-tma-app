@@ -1,27 +1,28 @@
-import { useLaunchParams, miniApp, useSignal } from '@telegram-apps/sdk-react';
-import { AppRoot } from '@telegram-apps/telegram-ui';
-import { Navigate, Route, Routes, HashRouter } from 'react-router-dom';
+// import { useLaunchParams, miniApp, useSignal } from '@telegram-apps/sdk-react';
+// import { AppRoot } from '@telegram-apps/telegram-ui';
+// import { Navigate, Route, Routes, HashRouter } from 'react-router-dom';
 
-import { routes } from '@/navigation/routes.tsx';
-import React, { useState } from 'react';
+// import { routes } from '@/navigation/routes.tsx';
+// import React, { useState } from 'react';
+import { useState } from 'react';
 
 import {
   Page,
   Navbar,
-  NavbarBackLink,
+  // NavbarBackLink,
   Tabbar,
   TabbarLink,
-  Block,
-  Icon,
-  List,
-  ListItem,
-  Toggle,
+  // Block,
+  // Icon,
+  // List,
+  // ListItem,
+  // Toggle,
 } from 'konsta/react';
 
 export function App() {
   const [activeTab, setActiveTab] = useState('tab-1');
-  const [isTabbarLabels, setIsTabbarLabels] = useState(true);
-  const [isTabbarIcons, setIsTabbarIcons] = useState(false);
+  const [isTabbarLabels] = useState(true);
+  const [isTabbarIcons] = useState(false);
   return (
     <Page>
       <Navbar
@@ -36,45 +37,45 @@ export function App() {
         <TabbarLink
           active={activeTab === 'tab-1'}
           onClick={() => setActiveTab('tab-1')}
-          icon={
-            isTabbarIcons && (
-              <Icon
-                ios={<EnvelopeFill className="w-7 h-7" />}
-                material={<MdEmail className="w-6 h-6" />}
-              />
-            )
-          }
+          // icon={
+          //   isTabbarIcons && (
+              // <Icon
+              //   ios={<EnvelopeFill className="w-7 h-7" />}
+              //   material={<MdEmail className="w-6 h-6" />}
+              // />
+          //   )
+          // }
           label={isTabbarLabels && 'Home'}
         />
         <TabbarLink
           active={activeTab === 'tab-2'}
           onClick={() => setActiveTab('tab-2')}
-          icon={
-            isTabbarIcons && (
-              <Icon
-                ios={<Calendar className="w-7 h-7" />}
-                material={<MdToday className="w-6 h-6" />}
-              />
-            )
-          }
+          // icon={
+          //   isTabbarIcons && (
+              // <Icon
+              //   ios={<Calendar className="w-7 h-7" />}
+              //   material={<MdToday className="w-6 h-6" />}
+              // />
+          //   )
+          // }
           label={isTabbarLabels && 'Search'}
         />
         <TabbarLink
           active={activeTab === 'tab-3'}
           onClick={() => setActiveTab('tab-3')}
-          icon={
-            isTabbarIcons && (
-              <Icon
-                ios={<CloudUploadFill className="w-7 h-7" />}
-                material={<MdFileUpload className="w-6 h-6" />}
-              />
-            )
-          }
+          // icon={
+            // isTabbarIcons && (
+              // <Icon
+              //   ios={<CloudUploadFill className="w-7 h-7" />}
+              //   material={<MdFileUpload className="w-6 h-6" />}
+              // />
+            // )
+          // }
           label={isTabbarLabels && 'Profile'}
         />
       </Tabbar>
 
-      {activeTab === 'tab-1' && (
+      {/* {activeTab === 'tab-1' && (
         <Block strong inset className="space-y-4">
           <p>
             <b>Home</b>
@@ -94,7 +95,7 @@ export function App() {
             <b>Profile</b>
           </p>
         </Block>
-      )}
+      )} */}
     </Page>
   );
 }
