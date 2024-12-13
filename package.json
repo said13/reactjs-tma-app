@@ -18,9 +18,12 @@
     "@telegram-apps/telegram-ui": "^2.1.5",
     "@tonconnect/ui-react": "^2.0.5",
     "eruda": "^3.0.1",
+    "framework7": "^8.3.4",
+    "framework7-react": "^8.3.4",
     "konsta": "^4.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
     "react-router-dom": "^6.23.0",
     "tailwind": "^4.0.0"
   },

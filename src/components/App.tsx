@@ -5,7 +5,6 @@
 // import { routes } from '@/navigation/routes.tsx';
 // import React, { useState } from 'react';
 import { useState } from 'react';
-
 import {
   Page,
   Navbar,
@@ -39,10 +38,10 @@ export function App() {
           onClick={() => setActiveTab('tab-1')}
           // icon={
           //   isTabbarIcons && (
-              // <Icon
-              //   ios={<EnvelopeFill className="w-7 h-7" />}
-              //   material={<MdEmail className="w-6 h-6" />}
-              // />
+          //     <Icon
+          //       ios={<EnvelopeFill className="w-7 h-7" />}
+          //       material={<MdEmail className="w-6 h-6" />}
+          //     />
           //   )
           // }
           label={isTabbarLabels && 'Home'}
@@ -52,10 +51,10 @@ export function App() {
           onClick={() => setActiveTab('tab-2')}
           // icon={
           //   isTabbarIcons && (
-              // <Icon
-              //   ios={<Calendar className="w-7 h-7" />}
-              //   material={<MdToday className="w-6 h-6" />}
-              // />
+          //     <Icon
+          //       ios={<Calendar className="w-7 h-7" />}
+          //       material={<MdToday className="w-6 h-6" />}
+          //     />
           //   )
           // }
           label={isTabbarLabels && 'Search'}
@@ -64,12 +63,12 @@ export function App() {
           active={activeTab === 'tab-3'}
           onClick={() => setActiveTab('tab-3')}
           // icon={
-            // isTabbarIcons && (
-              // <Icon
-              //   ios={<CloudUploadFill className="w-7 h-7" />}
-              //   material={<MdFileUpload className="w-6 h-6" />}
-              // />
-            // )
+          //   isTabbarIcons && (
+          //     <Icon
+          //       ios={<CloudUploadFill className="w-7 h-7" />}
+          //       material={<MdFileUpload className="w-6 h-6" />}
+          //     />
+          //   )
           // }
           label={isTabbarLabels && 'Profile'}
         />
