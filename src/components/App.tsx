@@ -6,6 +6,7 @@
 // import React, { useState } from 'react';
 import { useState } from 'react';
 import {
+  App,
   Page,
   Navbar,
   // NavbarBackLink,
@@ -18,63 +19,64 @@ import {
   // Toggle,
 } from 'konsta/react';
 
-export function App() {
+export function AppModule() {
   const [activeTab, setActiveTab] = useState('tab-1');
   const [isTabbarLabels] = useState(true);
   const [isTabbarIcons] = useState(false);
   return (
-    <Page>
-      <Navbar
-        title="Telegram mini app"
+    <App safeAreas theme="ios">
+      <Page>
+        <Navbar
+          title="Telegram mini app"
         />
 
-      <Tabbar
-        labels={isTabbarLabels}
-        icons={isTabbarIcons}
-        className="left-0 bottom-0 fixed"
-      >
-        <TabbarLink
-          active={activeTab === 'tab-1'}
-          onClick={() => setActiveTab('tab-1')}
-          // icon={
-          //   isTabbarIcons && (
-          //     <Icon
-          //       ios={<EnvelopeFill className="w-7 h-7" />}
-          //       material={<MdEmail className="w-6 h-6" />}
-          //     />
-          //   )
-          // }
-          label={isTabbarLabels && 'Home'}
-        />
-        <TabbarLink
-          active={activeTab === 'tab-2'}
-          onClick={() => setActiveTab('tab-2')}
-          // icon={
-          //   isTabbarIcons && (
-          //     <Icon
-          //       ios={<Calendar className="w-7 h-7" />}
-          //       material={<MdToday className="w-6 h-6" />}
-          //     />
-          //   )
-          // }
-          label={isTabbarLabels && 'Search'}
-        />
-        <TabbarLink
-          active={activeTab === 'tab-3'}
-          onClick={() => setActiveTab('tab-3')}
-          // icon={
-          //   isTabbarIcons && (
-          //     <Icon
-          //       ios={<CloudUploadFill className="w-7 h-7" />}
-          //       material={<MdFileUpload className="w-6 h-6" />}
-          //     />
-          //   )
-          // }
-          label={isTabbarLabels && 'Profile'}
-        />
-      </Tabbar>
+        <Tabbar
+          labels={isTabbarLabels}
+          icons={isTabbarIcons}
+          className="left-0 bottom-0 fixed"
+        >
+          <TabbarLink
+            active={activeTab === 'tab-1'}
+            onClick={() => setActiveTab('tab-1')}
+            // icon={
+            //   isTabbarIcons && (
+            //     <Icon
+            //       ios={<EnvelopeFill className="w-7 h-7" />}
+            //       material={<MdEmail className="w-6 h-6" />}
+            //     />
+            //   )
+            // }
+            label={isTabbarLabels && 'Home'}
+          />
+          <TabbarLink
+            active={activeTab === 'tab-2'}
+            onClick={() => setActiveTab('tab-2')}
+            // icon={
+            //   isTabbarIcons && (
+            //     <Icon
+            //       ios={<Calendar className="w-7 h-7" />}
+            //       material={<MdToday className="w-6 h-6" />}
+            //     />
+            //   )
+            // }
+            label={isTabbarLabels && 'Search'}
+          />
+          <TabbarLink
+            active={activeTab === 'tab-3'}
+            onClick={() => setActiveTab('tab-3')}
+            // icon={
+            //   isTabbarIcons && (
+            //     <Icon
+            //       ios={<CloudUploadFill className="w-7 h-7" />}
+            //       material={<MdFileUpload className="w-6 h-6" />}
+            //     />
+            //   )
+            // }
+            label={isTabbarLabels && 'Profile'}
+          />
+        </Tabbar>
 
-      {/* {activeTab === 'tab-1' && (
+        {/* {activeTab === 'tab-1' && (
         <Block strong inset className="space-y-4">
           <p>
             <b>Home</b>
@@ -95,7 +97,8 @@ export function App() {
           </p>
         </Block>
       )} */}
-    </Page>
+      </Page>
+    </App>
   );
 }
 
