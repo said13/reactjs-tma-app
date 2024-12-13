@@ -34,7 +34,17 @@ export function init(debug: boolean): void {
   backButton.mount();
   miniApp.mount();
   themeParams.mount();
-  swipeBehavior.disableVertical();
+
+  if (swipeBehavior.mount.isAvailable()) {
+    swipeBehavior.mount();
+    swipeBehavior.isMounted(); // true
+
+    if (swipeBehavior.disableVertical.isAvailable()) {
+      swipeBehavior.disableVertical();
+      swipeBehavior.isVerticalEnabled(); // false
+    }    
+  }
+
   initData.restore();
   void viewport
     .mount()
