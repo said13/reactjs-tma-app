@@ -23,7 +23,7 @@ export function App() {
   const [isTabbarLabels] = useState(true);
   const [isTabbarIcons] = useState(false);
   return (
-    <Page className='safe-areas'>
+    <Page>
       <Navbar
         title="Telegram mini app"
         />
