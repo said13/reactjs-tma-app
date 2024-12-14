@@ -24,8 +24,9 @@ export function AppModule() {
   const [isTabbarLabels] = useState(true);
   const [isTabbarIcons] = useState(false);
   return (
-    <App safeAreas theme="ios">
-      {/* <Page> */}
+    <>
+      <App safeAreas theme="ios">
+        {/* <Page> */}
         <Navbar
           title="Telegram mini app"
         />
@@ -97,8 +98,9 @@ export function AppModule() {
           </p>
         </Block>
       )} */}
-      {/* </Page> */}
-    </App>
+        {/* </Page> */}
+      </App>
+    </>
   );
 }
 
