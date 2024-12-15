@@ -1,6 +1,6 @@
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
 
-import { AppModule } from '@/components/AppModule';
+import { App } from '@/components/App';
 import { ErrorBoundary } from '@/components/ErrorBoundary.tsx';
 import { publicUrl } from '@/helpers/publicUrl.ts';
 
@@ -27,7 +27,7 @@ export function Root() {
       <TonConnectUIProvider
         manifestUrl={publicUrl('tonconnect-manifest.json')}
       >
-        <AppModule />
+        <App />
       </TonConnectUIProvider>
     </ErrorBoundary>
   );
