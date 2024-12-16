@@ -9,6 +9,9 @@ import {
   init as initSDK,
 } from '@telegram-apps/sdk-react';
 
+// import {
+//   viewport
+// } from '@telegram-apps/sdk'
 /**
  * Initializes the application and configures its dependencies.
  */
@@ -52,6 +55,10 @@ export function init(debug: boolean): void {
       console.error('Something went wrong mounting the viewport', e);
     })
     .then(() => {
+      if (viewport.requestFullscreen.isAvailable()) {
+        viewport.requestFullscreen();
+        viewport.isFullscreen(); // true
+      }      
       viewport.bindCssVars();
     });
 
